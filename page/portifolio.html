@@ -58,42 +58,6 @@
                 Instagram: <a href="https://www.instagram.com/vicoculilo.digital/">@vicoculilo.digital<i class="fab fa-instagram"></i></a>
             </div>
         </div>
-	</footer> 
-    <script>
-        // Função para criar o carrossel de imagens
-        function createCarousel() {
-          var carouselContainer = document.querySelector('.portifolio__banners'); // Seleciona o contêiner do carrossel
-          var carouselImages = carouselContainer.querySelectorAll('.image'); // Seleciona todas as imagens do carrossel
-          var currentIndex = 0; // Índice da imagem atual
-      
-          // Função para exibir as imagens
-          function showImages(index) {
-            for (var i = 0; i < carouselImages.length; i++) {
-              carouselImages[i].style.transform = 'scale(0.8)'; // Reduz o tamanho das imagens
-              carouselImages[i].style.opacity = '0.5'; // Diminui a opacidade das imagens
-            }
-      
-            carouselImages[index].style.transform = 'scale(1.2)'; // Aumenta o tamanho da imagem selecionada
-            carouselImages[index].style.opacity = '1'; // Aumenta a opacidade da imagem selecionada
-            carouselContainer.insertBefore(carouselImages[index], carouselImages[1]); // Move a imagem selecionada para o meio
-          }
-      
-          // Função para exibir o próximo slide
-          function nextSlide() {
-            currentIndex = (currentIndex + 1) % carouselImages.length; // Calcula o próximo índice
-            showImages(currentIndex); // Exibe o próximo slide
-          }
-      
-          // Define o intervalo de tempo para trocar os slides automaticamente
-          setInterval(nextSlide, 3000); // Troca para o próximo slide a cada 3 segundos
-      
-          // Chama a função showImages para exibir a primeira imagem
-          showImages(currentIndex);
-        }
-      
-        // Chama a função createCarousel quando o documento HTML for carregado
-        document.addEventListener('DOMContentLoaded', createCarousel);
-      </script>
-           
+	</footer>           
 </body>
 </html>
