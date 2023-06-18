@@ -1,0 +1,636 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+body {
+    background-color: #F6F0E9;
+    font-family: 'Open Sans', sans-serif;
+
+    margin: 0;
+    padding: 0;
+  }
+
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 1300px;
+    padding: 0 16px;
+    width: 100%;
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    @media (max-width: 1024px) {
+        padding: 0 4.444vw
+    }
+}
+
+header {
+    width: 100%;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+
+    background-color: #F6F0E9;
+    color: #fff;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 5px;
+    padding: 40px 0;
+}
+
+nav a {
+    color: #0d0c0c;
+    margin-left: 20px;
+    text-decoration: none;
+    font-size: 23px;
+    transition: 200ms all ease-in-out;
+    position: relative;
+}
+
+nav a::before{
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background-color: #724f1e;
+    transition: 200ms all ease-in-out;
+}
+
+nav a:hover::before  {
+    width: 100%;
+}
+
+.home .container {
+    flex-direction: row;
+}
+
+
+
+.home__banner {
+    /* max-height: 600px; */
+}
+
+.home__banner img {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+
+
+banner {
+    background-image: url('https://via.placeholder.com/1500x500');
+    background-size: cover;
+    background-position: center;
+    height: 500px;
+}
+
+.intro{
+    width: 100%;
+}
+
+.intro h2 {
+    /* font-family:  'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
+    color: #946A4A;
+    font-weight: 500;
+    font-size: 40px;
+    font-style: italic;
+    letter-spacing: 2px;
+    margin: 60px 0;
+}
+
+.sobre {
+    padding: 40px;
+}
+
+.sobre h1 {
+    font-size: 62px;
+    font-weight: 600;
+    position: relative;
+    padding-bottom: 20px;
+}
+
+.sobre h1::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 1px;
+    width: 100px;
+    background-color: #946A4A;
+}
+
+.sobre p {
+    font-size: 20px;
+    line-height: 24px;
+}
+
+.home__banners .container {
+    margin: 100px auto 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 40px;
+}
+
+.home__banners  {
+    position: relative;
+}
+
+.home__banners::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 40%;
+    top: 30%;
+    left: 0;
+    background: linear-gradient(to top right, rgb(130, 95, 68), rgba(236, 152, 87, 0.4));
+}
+
+.banner-small {
+    width: 25%;
+    display: flex;
+    position: relative;
+    transition: 600ms all cubic-bezier(0.13, 0.99, 0.58, 1);
+}
+
+.banner-small:hover {
+    transform: translateY(-10px);
+}
+
+.banner-small.meio {
+    width: 35%;
+    display: flex;
+}
+
+.banner-small img {
+    height: auto;
+    max-width: 100%;
+    position: relative;
+}
+
+.banner-small span {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    width: 100%;
+    font-size: 32px;
+    color: white;
+    font-weight: 600;
+    z-index: 10;
+}
+
+.banner-small::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top right, rgb(185, 134, 94), rgba(198, 145, 105, 0));
+    z-index: 3;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.col {
+    flex: 1;
+    margin: 0 10px;
+}
+
+.col img {
+    max-width: 100%;
+}
+
+.col h3 {
+    margin-top: 0;
+}
+
+.col p {
+    margin-bottom: 0;
+}
+
+.home {
+    flex-direction: column;
+}
+
+.servicos{
+    margin: 50px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+    align-items: center;
+    padding: 0;
+}
+
+.servicos > .row{
+    background-color: #e5d3bf;
+    width: 100%;
+    padding: 100px 0;
+}
+
+.servicos > .row > .container{
+    flex-direction: row;
+}
+
+.servicos > .row img{
+    max-width: 500px;
+}
+
+.servicos .col{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.servicos .col h1{
+    width: 100%;
+    text-align: left;
+    font-size: 52px;
+    margin: 0;
+}
+
+.servicos .col p{
+    width: 100%;
+    text-align: left;
+    font-size: 32px;
+    color: rgba(148, 106, 74, 1);
+}
+
+
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.post {
+    margin: 10px;
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+    
+}
+
+.image {
+    margin: 10px;
+    width: 220px;
+    height: 317px;
+    object-fit: cover;
+}
+
+footer {
+    background-color: #585858;
+    color: #fff;
+    padding: 40px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
+
+.contact-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.contact-info div {
+    margin: 0 10px;
+    letter-spacing: 1px;
+    font-size: 16px;
+}
+
+.contact-info a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+.social-media {
+    display: flex;
+    justify-content: center;
+}
+
+.social-media a {
+    display: inline-block;
+    color: #fff;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.social-media a:hover {
+    text-decoration: underline;
+
+}
+  
+  section {
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .titulo {
+    text-align: center;
+    color: #946A4A;
+    font-size: 38px;
+    font-weight: 500;
+    position: relative;
+
+  }
+
+  .titulo::before {
+    content: '';
+    position: absolute;
+    bottom: 30px;
+    height: 2px;
+    width: 40%;
+    left: 30%;
+    background-color: #946A4A;
+  }
+
+  .titulo2::before {
+    content: '';
+    position: absolute;
+    bottom: 30px;
+    height: 2px;
+    width: 30%;
+    left: 35%;
+    background-color: #946A4A;
+  }
+  
+  h1 {
+    margin-top: 0;
+    color: #946A4A;
+  }
+  h3 {
+    margin-top: 0;
+  }
+  
+  p {
+    margin-bottom: 0;
+  }
+  
+  form {
+    margin-top: 20px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 10px;
+    width: 100%;
+    
+  
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    
+  }
+  
+  textarea {
+    resize: vertical;
+  }
+  
+  select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  button[type="submit"] {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #45a049;
+    
+  }
+
+  .orcamento h3 {
+    width: 100%;
+    text-align: left;
+    color: #946A4A;
+    font-size: 36px;
+  }
+
+  .orcamento > p {
+    width: 100%;
+    text-align: left;
+    color: #302d2d;
+    font-size: 16px;
+    margin-top: 0;
+  }
+  .orcamento form {
+    background-color: #be9e73;
+    padding: 20px;
+    display: flex;
+    width: 100%;
+    gap: 40px;
+    flex-direction: column;
+    margin-bottom: 100px;
+    
+  }
+
+  .orcamento form .form__campos {
+    width: 100%;
+    display: flex;
+    gap: 40px;
+  }
+  .orcamento form .form__campo {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .orcamento form .form__campo input {
+    border: 1px solid white;
+    background-color: #be9e73;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+
+  .orcamento form .form__campo label {
+    color: white;
+    font-size: 16px;
+  }
+
+  .orcamento form > input {
+      border: none;
+    color: #332d2d;
+    font-size: 20px;
+    width: 200px;
+    height: auto;
+    padding: 20px;
+    border-radius: 50px;
+    margin: 0 auto;
+  }
+
+
+.portifolio__banners {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.portifolio__banners2 {
+    margin-top: 200px;
+    background-color: #be9e73;
+    padding: 20px;
+    display: flex;
+    width: 100%;
+}
+
+
+.portifolio__banners > img {
+    display: flex;
+    width: 27%;
+    height: auto;
+    object-fit: contain;
+}
+
+.portifolio__banners2 > img:nth-child(2) {
+    display: flex;
+    width: 40%;
+    filter: drop-shadow(5px 5px 5px #22222269);
+}
+
+.solicite {
+    font-size: 28px;
+    font-weight: 600;
+    color: #6b491c;
+    text-decoration: none;
+    background-color: white;
+    border-radius: 50px;
+    padding: 20px 30px;
+    margin: 100px auto 200px;
+}
+
+.solicite:hover {
+    background-color: rgb(207, 200, 183);
+}
+
+.cliente {
+    padding: 20px;
+    background-color: #ede9e4;
+    width: 100%;
+    margin-bottom: 100px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.cliente h2{
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.cliente p{
+    font-size: 18px;
+    font-weight: 500;
+}
+
+@media (max-width: 1025px) {
+    header nav {
+        justify-content: space-between;
+    }
+    
+    header nav a {
+        font-size: 14px;
+        margin: 0;
+    }
+
+    .home.container > .row{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .home__banners::before {
+        display: none;
+    }
+
+    .home__banners .container {
+        flex-direction: column;
+    }
+
+    .banner-small {
+        width: 100%;
+    }
+
+    .banner-small.meio {
+        width: 100%;
+    }
+
+    .servicos > .row img{
+        max-width: 100%;
+    }
+
+    .portifolio__banners {
+        flex-direction: column;
+    }
+
+    .portifolio__banners img {
+        width: 100% !important;
+        margin: 0;
+    }
+
+    .portifolio__banners2 {
+        gap: 20px;
+    }
+
+    .form__campos {
+        flex-direction: column;
+    }
+
+    .form__campos label {
+        font-size: 18px !important;
+    }
+
+    .container.orcamento h3 {
+        font-size: 26px !important;
+
+    }
+    
+    .container.orcamento p {
+        font-size: 18px !important;
+
+    }
+
+    .container.orcamento input {
+        height: 60px;
+
+    }
+
+    .servicos > .row > .container{
+        flex-direction: column;
+    }
+}
