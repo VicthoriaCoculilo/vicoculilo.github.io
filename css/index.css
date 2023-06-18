@@ -518,12 +518,13 @@ footer {
     width: 27%;
     height: auto;
     object-fit: contain;
+    filter: drop-shadow(5px 5px 5px #22222269);
 }
 
-.portifolio__banners2 > img:nth-child(2) {
+.portifolio__banners > img:nth-child(2) {
     display: flex;
     width: 40%;
-    filter: drop-shadow(5px 5px 5px #22222269);
+    
 }
 
 .solicite {
