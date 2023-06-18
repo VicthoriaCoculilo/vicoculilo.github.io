@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br"> 
+ <head>
+	<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portifólio</title>
+    <link rel="stylesheet" href="./../css/index.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+	<script src="./../script/index.js"></script>
+ </head>
+ <body>
+    <header class="container">
+		<nav>
+			<a href="../index.html">Home</a>
+			<a href="./servicos.html">Serviços</a>
+			<a href="./clientes.html">Clientes</a>
+            <a href="./portifolio.html">Portifólio</a>
+			<a href="./orçamentos.html">Orçamentos</a>
+		</nav>	
+	</header>
+ 
+	<section class="container orcamento">
+    <div class="titulo titulo2">
+    	<h1>ORÇAMENTOS</h1>
+    </div>
+
+    <h3>Solicitação de Orçamento</h3>
+    <p>Preencha os campos abaixo para que possamos entender melhor como iremos te ajudar!</p>
+    <form action="/" method="post">
+		<div class="form__campos">
+			<div class="form__campo">
+				
+				<label for="nome">Nome:</label>
+				<input type="text" id="nome" name="nome" required>
+		
+				<label for="email">E-mail:</label>
+				<input type="email" id="email" name="email" required> 
+				
+				<label for="telefone">Telefone:</label>
+				<input type="tel" id="telefone" name="telefone" required>
+			</div>
+			<div class="form__campo">
+				
+				<label for="empresa">Empresa:</label>
+				<input type="text" id="empresa" name="empresa" required>
+				
+				<label for="area">Área de atuação:</label>
+				<input type="text" id="area" name="area" required>
+				
+				<label for="redes">Redes sociais:</label>
+				<input type="text" id="redes" name="redes" required>
+			</div>
+		</div>
+	<input id="enviar-orcamento" type="submit" value="Enviar">
+	</form>
+</section>
+ 
+ 
+ <footer>
+	<div  class="container">
+		<div class="contact-info">
+			<div>
+				Telefone: <a href="tel:+5521999419006">(21) 99941-9006</a>
+			</div>
+			<div>
+				E-mail: <a href="mailto:vicoculilodigital@gmail.com">vicoculilodigital@gmail.com</a>
+			</div>
+			<div>
+				Site: <a href="https://www.empresa.com">www.empresa.com</a>
+			</div>
+			<div class="social-media">
+                Instagram: <a href="https://www.instagram.com/vicoculilo.digital/">@vicoculilo.digital<i class="fab fa-instagram"></i></a>
+            </div>
+	</div>
+</footer>
+ </body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br"> 
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portifólio</title>
+    <link rel="stylesheet" href="./../css/index.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+	<script src="./../script/index.js"></script>
+</head>
+<body>
+    <header class="container">
+		<nav>
+			<a href="../index.html">Home</a>
+			<a href="./servicos.html">Serviços</a>
+			<a href="./clientes.html">Clientes</a>
+            <a href="./portifolio.html">Portifólio</a>
+			<a href="./orçamentos.html">Orçamentos</a>
+		</nav>	
+	</header>
+    <section class="portifolio container">
+        <div class="titulo titulo2">
+            <h1>PORTIFÓLIO</h1>
+        </div>
+        <div class="portifolio__banners">
+            <img class="image" src="../img/2.port.jpg" alt="Imagem 1">
+            <img class="image" src="../img/1.port.png" alt="Imagem 2">
+            <img class="image" src="../img/3.port.png" alt="Imagem 3">
+        </div>
+
+
+        <div class="portifolio__banners portifolio__banners2">
+            <img class="post" src="./../img/1.post.png" alt="Imagem 1">
+            <img class="post" src="../img/2.post.png" alt="Imagem 2">
+            <img class="post" src="../img/3.post.png" alt="Imagem 3">
+        </div>
+        <a href="./orçamentos.html" class="solicite">
+            Solicite Orçamento
+        </a>
+    </section>
+
+
+    <footer>
+        <div  class="container">
+            <div class="contact-info">
+                <div>
+                    Telefone: <a href="tel:+5521999419006">(21) 99941-9006</a>
+                </div>
+                <div>
+                    E-mail: <a href="mailto:vicoculilodigital@gmail.com">vicoculilodigital@gmail.com</a>
+                </div>
+                <div>
+                    Site: <a href="https://www.empresa.com">www.empresa.com</a>
+                </div>
+            </div>
+            <div class="social-media">
+                Instagram: <a href="https://www.instagram.com/vicoculilo.digital/">@vicoculilo.digital<i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+	</footer> 
+    <script>
+        // Função para criar o carrossel de imagens
+        function createCarousel() {
+          var carouselContainer = document.querySelector('.portifolio__banners'); // Seleciona o contêiner do carrossel
+          var carouselImages = carouselContainer.querySelectorAll('.image'); // Seleciona todas as imagens do carrossel
+          var currentIndex = 0; // Índice da imagem atual
+      
+          // Função para exibir as imagens
+          function showImages(index) {
+            for (var i = 0; i < carouselImages.length; i++) {
+              carouselImages[i].style.transform = 'scale(0.8)'; // Reduz o tamanho das imagens
+              carouselImages[i].style.opacity = '0.5'; // Diminui a opacidade das imagens
+            }
+      
+            carouselImages[index].style.transform = 'scale(1.2)'; // Aumenta o tamanho da imagem selecionada
+            carouselImages[index].style.opacity = '1'; // Aumenta a opacidade da imagem selecionada
+            carouselContainer.insertBefore(carouselImages[index], carouselImages[1]); // Move a imagem selecionada para o meio
+          }
+      
+          // Função para exibir o próximo slide
+          function nextSlide() {
+            currentIndex = (currentIndex + 1) % carouselImages.length; // Calcula o próximo índice
+            showImages(currentIndex); // Exibe o próximo slide
+          }
+      
+          // Define o intervalo de tempo para trocar os slides automaticamente
+          setInterval(nextSlide, 3000); // Troca para o próximo slide a cada 3 segundos
+      
+          // Chama a função showImages para exibir a primeira imagem
+          showImages(currentIndex);
+        }
+      
+        // Chama a função createCarousel quando o documento HTML for carregado
+        document.addEventListener('DOMContentLoaded', createCarousel);
+      </script>
+           
+</body>
+</html>
